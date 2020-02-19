@@ -1,25 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
+import Login from "./components/Login";
+import Users from "./components/Users";
+import Sales from "./components/Sales";
+import History from "./components/History";
+import Products from "./components/Products";
+import Categories from "./components/Categories";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Switch>
+          <Route exact path="/login" render={props => <Login {...props} />} />
+          <Route exact path="/" render={props => <Sales {...props} />} />
+          <Route
+            exact
+            path="/search/:search"
+            render={props => <Sales {...props} />}
+          />
+          <Route
+            exact
+            path="/history"
+            render={props => <History {...props} />}
+          />
+          <Route
+            exact
+            path="/products/:page"
+            render={props => <Products {...props} />}
+          />
+          <Route
+            exact
+            path="/categories"
+            render={props => <Categories {...props} />}
+          />
+          <Route exact path="/users" render={props => <Users {...props} />} />
+          <Route render={props => <Login {...props} />} />
+        </Switch>
+      </Router>
+    </Provider>
   );
 }
 

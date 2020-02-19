@@ -1,0 +1,403 @@
+@font-face {
+  font-family: "Airbnb Cereal App Book";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Airbnb Cereal App Book"),
+    url("AirbnbCerealBook.woff") format("woff");
+}
+
+/*-- LOADING --*/
+.loader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  perspective: 800px;
+}
+
+.inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.inner.one {
+  left: 0%;
+  top: 0%;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 3px solid #57cad5;
+}
+
+.inner.two {
+  right: 0%;
+  top: 0%;
+  animation: rotate-two 1s linear infinite;
+  border-right: 3px solid #055ea5;
+}
+
+.inner.three {
+  right: 0%;
+  bottom: 0%;
+  animation: rotate-three 1s linear infinite;
+  border-top: 3px solid #fab1b3;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+::-webkit-scrollbar-button {
+  display: block;
+  height: 13px;
+  border-radius: 0px;
+  background-color: #aaa;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    to bottom right,
+    #055ea5 0%,
+    #57cad5 51%,
+    #055ea5 100%
+  );
+  background-size: 200% auto;
+  border-radius: 0px;
+  transition: 0.5s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-position: bottom center;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #d1d1d1;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+body {
+  font-family: "Airbnb Cereal App Book", sans-serif !important;
+  background: rgba(190, 195, 202, 0.3);
+}
+
+.login:before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.reform {
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  border-color: #57cad5;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: #57cad5;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0 0 8px rgba(87, 202, 213, 0.75);
+  outline: 0 none;
+}
+
+.btn,
+.swal2-confirm,
+.swal2-cancel,
+.page-link {
+  text-transform: uppercase !important;
+  transition: 0.5s !important;
+  background-size: 200% auto !important;
+}
+
+.btn-primary,
+.swal2-confirm,
+.page-item.active .page-link {
+  background-image: linear-gradient(
+    to right,
+    #055ea5 0%,
+    #57cad5 51%,
+    #055ea5 100%
+  ) !important;
+  border: none !important;
+  transition: 0.5s !important;
+}
+
+.btn-primary:hover,
+.swal2-confirm:hover {
+  background-position: right center !important;
+  border: none !important;
+  -webkit-box-shadow: 0 7px 4px #777 !important;
+  -moz-box-shadow: 0 7px 4px #777 !important;
+  box-shadow: 0 7px 4px #777 !important;
+}
+
+.btn-secondary,
+.swal2-cancel,
+.page-link:hover {
+  background-image: linear-gradient(
+    to right,
+    #f24f8a 0%,
+    #fab1b3 51%,
+    #f24f8a 100%
+  ) !important;
+  border: none !important;
+  transition: 0.5s !important;
+}
+
+.page-link:hover {
+  color: #fff;
+  border: 0;
+}
+
+.btn-secondary:hover,
+.swal2-cancel:hover,
+.page-link:hover {
+  background-position: right center !important;
+  border: none !important;
+  -webkit-box-shadow: 0 7px 4px #777 !important;
+  -moz-box-shadow: 0 7px 4px #777 !important;
+  box-shadow: 0 7px 4px #777 !important;
+}
+
+.login {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.login-card {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 70px;
+  max-width: 70px;
+  background: #ffffff;
+  color: #1f1f1f;
+  transition: all 0.3s;
+  top: 106px;
+}
+.nocart {
+  font-size: 10px;
+  padding: 1px;
+}
+
+.icon {
+  width: 25px;
+  height: auto;
+}
+
+#content {
+  width: 100%;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.cart {
+  min-height: 100vh;
+}
+
+.cartbtn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.cartside {
+  margin-bottom: 230px;
+}
+.cartbutton {
+  top: 100%;
+  transform: translateY(50%);
+}
+
+.carttext {
+  margin-top: -35px;
+}
+
+.card-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-outline-success {
+  background: rgba(130, 222, 58, 0.3);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.overlay img {
+  color: white;
+  width: 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.cardloading {
+  margin: 100px 0px 100px 0px;
+  position: inherit !important;
+}
+
+#demo-2 input {
+  outline: none;
+}
+#demo-2 input[type="search"] {
+  font-family: inherit;
+  font-size: 100%;
+}
+#demo-2 input::-webkit-search-decoration,
+#demo-2 input::-webkit-search-cancel-button {
+  display: none;
+}
+
+#demo-2 input[type="search"] {
+  background: rgba(0, 0, 0, 0) url(magnifying-glass.png) no-repeat 3px center;
+  border: none;
+  padding: 0 15px 0 0;
+  width: 55px;
+
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
+
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#demo-2 input[type="search"]:focus {
+  width: 130px;
+  background-color: #fff;
+  border-color: #66cc75;
+
+  -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+}
+
+#demo-2 input:-moz-placeholder {
+  color: #999;
+}
+#demo-2 input::-webkit-input-placeholder {
+  color: #999;
+}
+
+/* Demo 2 */
+#demo-2 input[type="search"] {
+  width: 15px;
+  padding-left: 10px;
+  color: transparent;
+  cursor: pointer;
+  background-size: 20px;
+  height: 25px;
+}
+#demo-2 input[type="search"]:hover {
+  background-color: #fff;
+}
+#demo-2 input[type="search"]:focus {
+  width: 185px;
+  padding-left: 32px;
+  color: #000;
+  background-color: #fff;
+  cursor: auto;
+}
+#demo-2 input:-moz-placeholder {
+  color: transparent;
+}
+#demo-2 input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.iconbtn {
+  height: 23px;
+}
+
+.hcard {
+  transform: translate(0%, 15%);
+}
