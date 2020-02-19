@@ -169,14 +169,12 @@ class Sales extends Component {
                   </form>
                 </nav>
                 <div className="py-3 px-2">
-                  <div className="container">
-                    {!this.props.products.isPending ? (
-                      <div className="row">
-                        {filterByValue(
-                          this.state.productData,
-                          this.state.search
-                        ).length !== 0 ? (
-                          filterByValue(
+                  {!this.props.products.isPending ? (
+                    <div className="container">
+                      {filterByValue(this.state.productData, this.state.search)
+                        .length !== 0 ? (
+                        <div className="row">
+                          {filterByValue(
                             this.state.productData,
                             this.state.search
                           ).map(products => {
@@ -226,29 +224,29 @@ class Sales extends Component {
                                 </h6>
                               </div>
                             );
-                          })
-                        ) : (
-                          <div className="container">
-                            <h1 className="text-center mt-5">
-                              Product Not Found!
-                            </h1>
-                          </div>
-                        )}
-                      </div>
-                    ) : (
-                      <div className="loader">
-                        <div className="inner one" />
-                        <div className="inner two" />
-                        <div className="inner three" />
-                        <span>
-                          <br />
-                          <br />
-                          <br />
-                          Loading...
-                        </span>
-                      </div>
-                    )}
-                  </div>
+                          })}
+                        </div>
+                      ) : (
+                        <div className="container">
+                          <h1 className="text-center mt-5">
+                            Product Not Found!
+                          </h1>
+                        </div>
+                      )}
+                    </div> /////
+                  ) : (
+                    <div className="loader">
+                      <div className="inner one" />
+                      <div className="inner two" />
+                      <div className="inner three" />
+                      <span>
+                        <br />
+                        <br />
+                        <br />
+                        Loading...
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="col-md-4 p-0 bg-white cart">
