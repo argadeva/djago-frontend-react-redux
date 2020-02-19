@@ -278,7 +278,7 @@ input[type="color"]:focus,
 }
 .cartbutton {
   top: 100%;
-  transform: translateY(50%);
+  transform: translateY(15%);
 }
 
 .carttext {

@@ -80,9 +80,6 @@ class Sales extends Component {
     this.setState({
       carts: []
     });
-    document.querySelectorAll(".overlay").forEach(function(a) {
-      a.remove();
-    });
   };
 
   submitCart = async () => {
@@ -173,10 +170,12 @@ class Sales extends Component {
                 </nav>
                 <div className="py-3 px-2">
                   <div className="container">
-                    {filterByValue(this.state.productData, this.state.search)
-                      .length !== 0 ? (
+                    {!this.props.products.isPending ? (
                       <div className="row">
-                        {this.props.products.isFulfilled ? (
+                        {filterByValue(
+                          this.state.productData,
+                          this.state.search
+                        ).length !== 0 ? (
                           filterByValue(
                             this.state.productData,
                             this.state.search
@@ -229,21 +228,25 @@ class Sales extends Component {
                             );
                           })
                         ) : (
-                          <div className="loader">
-                            <div className="inner one" />
-                            <div className="inner two" />
-                            <div className="inner three" />
-                            <span>
-                              <br />
-                              <br />
-                              <br />
-                              Loading...
-                            </span>
+                          <div className="container">
+                            <h1 className="text-center mt-5">
+                              Product Not Found!
+                            </h1>
                           </div>
                         )}
                       </div>
                     ) : (
-                      <h1 className="text-center mt-5">Product Not Found!</h1>
+                      <div className="loader">
+                        <div className="inner one" />
+                        <div className="inner two" />
+                        <div className="inner three" />
+                        <span>
+                          <br />
+                          <br />
+                          <br />
+                          Loading...
+                        </span>
+                      </div>
                     )}
                   </div>
                 </div>
