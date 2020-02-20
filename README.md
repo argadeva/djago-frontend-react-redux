@@ -39,7 +39,7 @@ _Products_
 
 _Add Product_
 
-![Screenshot](src/images/demo/addproducts.jpg)
+![Screenshot](src/images/demo/addproduct.jpg)
 
 ## Available Scripts
 
