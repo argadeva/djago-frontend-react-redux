@@ -59,7 +59,7 @@ export const editProducts = editData => {
 
 export const deleteProducts = id => {
   return {
-    type: "EDIT_PRODUCTS",
+    type: "DELETE_PRODUCTS",
     payload: Axios.delete(process.env.REACT_APP_URL_API + `products/${id}`, {
       headers: { "x-access-token": localStorage.usertoken }
     })

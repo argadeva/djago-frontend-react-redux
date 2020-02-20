@@ -1,4 +1,45 @@
+## Introduction
+
+D'Jago Frontend React Redux is a Point of Sale React Web App. The main features are:
+
+- Login and Register User.
+- CURD User, Categories and Products.
+- Add/Reduce Products Order
+- File Image Upload on product.
+- Search product by name.
+- Sort product by name, category, date.
+- Products page pagination.
+- Reporting on income today, yearly, and orders weekly.
+- Use Chart.js
+- Use Bootstrap Framework
+- Use SweetAlert2.js
+- Use Redux
+
+The D'Jago Frontend React Redux is written in React Js with Redux, it uses Restful API data storage back-end.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Demo
+
+_Login_
+
+![Screenshot](src/images/demo/login.jpg)
+
+_Sales_
+
+![Screenshot](src/images/demo/sales.jpg)
+
+_History_
+
+![Screenshot](src/images/demo/history.jpg)
+
+_Products_
+
+![Screenshot](src/images/demo/products.jpg)
+
+_Add Product_
+
+![Screenshot](src/images/demo/addproducts.jpg)
 
 ## Available Scripts
 
