@@ -10,7 +10,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-v12.14.1-success">
-  <img src="https://img.shields.io/badge/Express.js-v.4.17.1-informational">
+  <img src="https://img.shields.io/badge/React-v16.12.0-informational">
+  <img src="https://img.shields.io/badge/Axios-v0.19.2-orange">
+  <img src="https://img.shields.io/badge/Redux-v4.0.5-orange">
 </p>
 
 <p align="center">
