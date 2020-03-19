@@ -19,7 +19,8 @@
   <a href="#feature">Feature</a> •
   <a href="#demo">Demo</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#related-project ">Related Project</a>
+  <a href="#related-project">Related Project</a> •
+  <a href="#release-website ">Release Website</a>
 </p>
 
 ## Feature
@@ -79,3 +80,9 @@ _Add Product_
 
 - [`D'Jago Backend RestFulAPI (Back-end Web App)`](https://github.com/argadeva/djago-backend-restfulapi)
 - [`D'Jago React Native (Mobile App)`](https://github.com/argadeva/djago-react-native)
+
+## Release Website
+
+<a href="http://18.206.61.46/">
+  <img src="https://img.shields.io/badge/Visit%20on%20the-18.206.61.46-blue.svg?style=popout&logo=amazon-aws"/>
+</a>
