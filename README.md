@@ -36,11 +36,8 @@ D'Jago Frontend React Redux is a Point of Sale React Web App. Written in React J
 
 ## Demo
 
-|                                                                                                                             |                                                                                                                             |                                                                                                                             |
-| :-------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
-|  <img width="1604" src="https://github.com/argadeva/djago-frontend-react-redux/raw/master/src/images/demo/login.jpg"> blah  | <img width="1604" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png"> | <img width="1604" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png"> |
-| <img width="1604" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png"> | <img width="1604" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png"> | <img width="1604" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png"> |
-| <img width="1604" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png"> | <img width="1604" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png"> | <img width="1604" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png"> |
+![Screenshot](https://github.com/argadeva/djago-frontend-react-redux/raw/master/demo/demo1.jpg)
+![Screenshot](https://github.com/argadeva/djago-frontend-react-redux/raw/master/demo/demo2.jpg)
 
 ## How To Install
 
