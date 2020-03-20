@@ -6,8 +6,6 @@
   <br>
 </h1>
 
-<h4 align="center">D'Jago Frontend React Redux is a Point of Sale React Web App. Written in React Js with Redux, it uses Restful API data storage back-end.</h4>
-
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-v12.14.1-success">
   <img src="https://img.shields.io/badge/React-v16.12.0-informational">
@@ -15,15 +13,17 @@
   <img src="https://img.shields.io/badge/Redux-v4.0.5-orange">
 </p>
 
-<p align="center">
-  <a href="#feature">Feature</a> •
-  <a href="#demo">Demo</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#related-project">Related Project</a> •
-  <a href="#release-website ">Release Website</a>
-</p>
+## Table of Contents
 
-## Feature
+- [Introduction](#introduction)
+- [Demo](#demo)
+- [How To Install](#how-to-install)
+- [Release Website](#release-website)
+- [Related Project](#related-project)
+
+## Introduction
+
+D'Jago Frontend React Redux is a Point of Sale React Web App. Written in React Js with Redux, it uses Restful API data storage back-end. The main features are:
 
 - Login and Register User.
 - CURD User, Categories and Products.
@@ -32,11 +32,7 @@
 - Search product by name.
 - Sort product by name, category, date.
 - Products page pagination.
-- Reporting on income today, yearly, and orders weekly.
-- Use Chart.js
-- Use Bootstrap Framework
-- Use SweetAlert2.js
-- Use Redux
+- Reporting on income today, yearly, and orders weekly with chart.
 
 ## Demo
 
@@ -60,7 +56,7 @@ _Add Product_
 
 ![Screenshot](src/images/demo/addproduct.jpg)
 
-## How To Use
+## How To Install
 
 1. Clone this repository
    ```
@@ -71,18 +67,25 @@ _Add Product_
    $ cd djago-frontend-react-redux
    $ npm install
    ```
-3. Run
+3. Create `.env` file with environment variable in line with following:
+
+   ```
+   REACT_APP_URL_API = http://{your-url}:{your-port}/api/v1/
+   REACT_APP_URL_UPLOADS = http://{your-url}:{your-port}/uploads/
+   ```
+
+4. Run
    ```
    $ npm start
    ```
-
-## Related Project
-
-- [`D'Jago Backend RestFulAPI (Back-end Web App)`](https://github.com/argadeva/djago-backend-restfulapi)
-- [`D'Jago React Native (Mobile App)`](https://github.com/argadeva/djago-react-native)
 
 ## Release Website
 
 <a href="http://18.206.61.46/">
   <img src="https://img.shields.io/badge/Visit%20on%20the-18.206.61.46-blue.svg?style=popout&logo=amazon-aws"/>
 </a>
+
+## Related Project
+
+- [`D'Jago Backend RestFulAPI (Back-end Web App)`](https://github.com/argadeva/djago-backend-restfulapi)
+- [`D'Jago React Native (Mobile App)`](https://github.com/argadeva/djago-react-native)
