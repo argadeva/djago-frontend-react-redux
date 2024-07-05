@@ -47,7 +47,7 @@ export class Login extends Component {
                     className="logo mb-3"
                     style={{ height: 150 }}
                   />
-                  <h4 className="font-weight-bolder">D'Jago POS Web App</h4>
+                  <h4 className="font-weight-bolder">POS System</h4>
                 </div>
                 <div className="card-body">
                   {this.props.user.isRejected ? (

@@ -224,8 +224,7 @@ class Products extends Component {
               data.image =
                 this.state.editData.image.name === undefined
                   ? this.state.editData.image
-                  : process.env.REACT_APP_URL_UPLOADS +
-                    "file-" +
+                  : "file-" +
                     this.state.editData.image.name;
               data.price = this.state.editData.price;
               data.category_id = this.state.editData.category_id;
@@ -266,8 +265,7 @@ class Products extends Component {
                 image:
                   this.state.editData.image.name === undefined
                     ? ""
-                    : process.env.REACT_APP_URL_UPLOADS +
-                      "file-" +
+                    : "file-" +
                       this.state.editData.image.name,
                 categories: this.state.categoriesData[index].name,
                 stock: this.state.editData.stock,
