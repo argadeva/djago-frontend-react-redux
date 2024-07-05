@@ -266,11 +266,13 @@ input[type="color"]:focus,
 }
 
 .cartbtn {
-  position: absolute;
-  right: 0;
+  width: 31.6%;
+  right: 0px;
   bottom: 0;
-  left: 0;
   z-index: 1030;
+  position: fixed;
+  background: white;
+  border-top: 2px dashed #818182;
 }
 
 .cartside {

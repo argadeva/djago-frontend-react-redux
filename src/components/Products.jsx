@@ -13,6 +13,7 @@ import edit from "../images/edit.png";
 import remove from "../images/delete.png";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import { toBase64Sync } from "../utils/generals";
 
 const MySwal = withReactContent(Swal);
 
@@ -32,7 +33,8 @@ class Products extends Component {
     },
     image: false,
     categoriesData: [],
-    sort: "created_at"
+    sort: "created_at",
+    previewImage: "",
   };
 
   getProducts = async () => {
@@ -111,11 +113,15 @@ class Products extends Component {
   };
 
   handleFileUpload = event => {
-    this.setState({ image: true });
-    const editDatas = this.state.editData;
-    editDatas.image = event.target.files[0];
-    this.setState({
-      editDatas
+    const image = event.target.files[0];
+    toBase64Sync(image).then(data => {
+      this.setState({ image: true });
+      const editDatas = this.state.editData;
+      editDatas.image = image;
+      this.setState({
+        editDatas,
+        previewImage: data,
+      });
     });
   };
 
@@ -224,8 +230,7 @@ class Products extends Component {
               data.image =
                 this.state.editData.image.name === undefined
                   ? this.state.editData.image
-                  : "file-" +
-                    this.state.editData.image.name;
+                  : this.state.previewImage;
               data.price = this.state.editData.price;
               data.category_id = this.state.editData.category_id;
               data.categories = this.state.categoriesData[index2].name;
@@ -265,8 +270,7 @@ class Products extends Component {
                 image:
                   this.state.editData.image.name === undefined
                     ? ""
-                    : "file-" +
-                      this.state.editData.image.name,
+                    : this.state.previewImage,
                 categories: this.state.categoriesData[index].name,
                 stock: this.state.editData.stock,
                 description: this.state.editData.description
