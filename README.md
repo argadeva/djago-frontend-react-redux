@@ -36,8 +36,8 @@ D'Jago Frontend React Redux is a Point of Sale React Web App. Written in React J
 
 ## Demo
 
-![Screenshot](https://github.com/argadeva/djago-frontend-react-redux/raw/master/demo/demo1.jpg)
 ![Screenshot](https://github.com/argadeva/djago-frontend-react-redux/raw/master/demo/demo2.jpg)
+![Screenshot](https://github.com/argadeva/djago-frontend-react-redux/raw/master/demo/demo1.jpg)
 
 ## How To Install
 
